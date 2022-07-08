@@ -8,6 +8,32 @@
 
 #this function generates a special matrix and caches its inverse
 makeCacheMatrix <- function(x = matrix()) {
+inv <- NULL  #inverse property
+
+#this method sets the matrix
+set <- function( matrix) {
+  
+  mat <<- matrix
+  inv <<- Null
+  
+}
+
+
+# this method gets the matrix
+get <- function(){
+  mat
+}
+
+# this mathod sets the inverse of the matrix
+setInverse <- function(inverse){
+  inv <<- inverse
+}
+# this method gets the inverse of the matrix
+getInverse <-function(){
+  inv
+}
+
+list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 
 }
 
